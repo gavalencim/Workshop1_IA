@@ -295,8 +295,6 @@ Porque la función de fitness guía al algoritmo hacia dónde buscar. Si las pen
 
 **¿Qué sucedería si aumentáramos la tasa de mutación a 0.8 (80%)? ¿Mejoraría o empeoraría el algoritmo?**
 
-### Corrida 4
-
 **Fitness inicial:** 182 — **Fitness final:** 195 ✅ — **Generación de convergencia:** ~51
 
 ![Evolución Corrida 3](Figure_6_m=0.8.png)
@@ -320,8 +318,6 @@ El algoritmo empeora. Con 80% de probabilidad, casi todos los genes de cada indi
 
 **Experimenta con poblaciones de 10, 30 y 50 individuos. ¿Qué observas en términos de velocidad de convergencia y calidad de la solución?**
 
-## 4. Tamaño de Población
-
 Se experimentó con poblaciones de 10, 30 y 50 individuos. Los resultados fueron:
 
 | Tamaño | Fitness inicial | Fitness final | Convergencia (gen.) |
@@ -330,7 +326,7 @@ Se experimentó con poblaciones de 10, 30 y 50 individuos. Los resultados fueron
 | 30 | 140 | 200 ✅ | ~11 |
 | 50 | 90 | 200 ✅ | ~11 |
 
-### Población: 10 individuos
+#### Población: 10 individuos
 ![Evolución sz=10](Figure_7_sz10.png)
 
 Con solo 10 individuos el algoritmo **no logró alcanzar el fitness perfecto de 200** 
@@ -340,14 +336,14 @@ dar un pequeño salto tardío cerca de la generación 85. Esto evidencia pérdid
 diversidad genética temprana: la población converge a una solución subóptima y le 
 cuesta escapar de ella.
 
-### Población: 30 individuos
+#### Población: 30 individuos
 ![Evolución sz=30](Figure_8_sz30.png)
 
 Con 30 individuos el algoritmo alcanzó fitness 200 ya en la generación 11, 
 manteniéndolo estable el resto de la ejecución. La curva es empinada y limpia, 
 sin estancamientos visibles.
 
-### Población: 50 individuos
+#### Población: 50 individuos
 ![Evolución sz=50](Figure_9_sz50.png)
 
 Con 50 individuos el resultado fue igual de bueno: fitness 200 desde la generación 
