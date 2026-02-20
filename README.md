@@ -133,6 +133,45 @@ El algoritmo empeora. Con 80% de probabilidad, casi todos los genes de cada indi
 
 **Experimenta con poblaciones de 10, 30 y 50 individuos. ¿Qué observas en términos de velocidad de convergencia y calidad de la solución?**
 
+## 4. Tamaño de Población
+
+Se experimentó con poblaciones de 10, 30 y 50 individuos. Los resultados fueron:
+
+| Tamaño | Fitness inicial | Fitness final | Convergencia (gen.) |
+|---|---|---|---|
+| 10 | 127 | 195 ❌ | No alcanzó 200 |
+| 30 | 140 | 200 ✅ | ~11 |
+| 50 | 90 | 200 ✅ | ~11 |
+
+### Población: 10 individuos
+![Evolución sz=10](Figure_7_sz10.png)
+
+Con solo 10 individuos el algoritmo **no logró alcanzar el fitness perfecto de 200** 
+en 100 generaciones, quedándose en 195. La gráfica muestra una curva que sube 
+rápido al principio pero luego se estanca durante decenas de generaciones antes de 
+dar un pequeño salto tardío cerca de la generación 85. Esto evidencia pérdida de 
+diversidad genética temprana: la población converge a una solución subóptima y le 
+cuesta escapar de ella.
+
+### Población: 30 individuos
+![Evolución sz=30](Figure_8_sz30.png)
+
+Con 30 individuos el algoritmo alcanzó fitness 200 ya en la generación 11, 
+manteniéndolo estable el resto de la ejecución. La curva es empinada y limpia, 
+sin estancamientos visibles.
+
+### Población: 50 individuos
+![Evolución sz=50](Figure_9_sz50.png)
+
+Con 50 individuos el resultado fue igual de bueno: fitness 200 desde la generación 
+11, con una curva de convergencia prácticamente idéntica a la de 30. Cabe resaltar que inició 
+con una población con menor fitness que la población de 20 individuos.
+
+El caso de 10  demuestra que por debajo de cierto umbral de diversidad el algoritmo se queda 
+atrapado en óptimos locales y no garantiza encontrar la solución perfecta. Sobre las poblaciones de
+30 y 50 se nota que alcanzan rápidamente el fitness perfecto, sobretodo la población de 50 que
+inicia con un fitness peor. 
+
 ## Conclusiones
 
 **El algoritmo converge de forma robusta independientemente del punto de partida.** La corrida 3 comenzó con un fitness de apenas 87 —la peor población inicial de las tres—, con múltiples violaciones de restricciones duras, y aun así alcanzó el óptimo en las mismas generaciones que la corrida 1, que partió desde un estado mucho más favorable (182). Esto sugiere que la combinación de elitismo, selección por torneo y mutación del 20% es suficiente para escapar de poblaciones iniciales muy malas.
