@@ -98,6 +98,40 @@ Cada individuo se representa como una lista de 8 tuplas `(bloque, salón)`, una 
 Las tres corridas alcanzaron el **fitness perfecto de 200**, confirmando que el algoritmo encuentra consistentemente soluciones válidas sin importar la calidad del punto de partida.
 
 ---
+## Preguntas de análisis
+
+**¿En qué generación aproximadamente el algoritmo encontró una solución válida (sin violar restricciones duras)?:**
+En las tres corridas el algoritmo encontró una solución válida (fitness 200, sin violar ninguna restricción dura) antes de la generación 41. La corrida 2 fue la más rápida, convergiendo alrededor de la generación 21. Esto indica que con una población de 30 individuos y 100 generaciones, el algoritmo tiene margen de sobra para encontrar el óptimo.
+
+**¿Por qué es importante que las restricciones duras tengan penalizaciones más grandes (-50) que las blandas (-3 a -5)?**
+Porque la función de fitness guía al algoritmo hacia dónde buscar. Si las penalizaciones duras fueran del mismo orden que las blandas, un individuo con varios conflictos de salón pero buenos horarios podría tener un puntaje similar a uno completamente válido, y el algoritmo no distinguiría claramente cuál es mejor. Con -50 por violación dura, esos individuos quedan tan por debajo que la selección por torneo los descarta consistentemente, forzando la evolución hacia soluciones legales primero.
+
+**¿Qué sucedería si aumentáramos la tasa de mutación a 0.8 (80%)? ¿Mejoraría o empeoraría el algoritmo?**
+
+### Corrida 4
+
+**Fitness inicial:** 182 — **Fitness final:** 195 ✅ — **Generación de convergencia:** ~51
+
+![Evolución Corrida 3](Figure_6_m=0.8.png)
+
+**Horario final obtenido:**
+
+| Curso | Bloque | Salón | Capacidad | Estudiantes |
+|---|---|---|---|---|
+| MAT | Mie 8-10  | C | 50 | 45 |
+| FIS | Vie 8-10 | B | 30 | 30 |
+| QUI | Mie 8-10 | A | 40 | 35 |
+| PRG | Lun 10-12 | A | 40 | 40 |
+| LIT | Mie 8-10 | B | 30 | 25 |
+| HIS | Lun 8-10  | B | 30 | 30 |
+| ING | Lun 10-12 | C | 50 | 35 |
+| EDF | Lun 8-10 | C | 50 | 50 |
+
+---
+
+El algoritmo empeora. Con 80% de probabilidad, casi todos los genes de cada individuo cambiarían en cada generación, destruyendo las combinaciones buenas que el cruce y la selección lograron construir. El elitismo protegería a los 2 mejores, pero el resto de la población se regeneraría casi aleatoriamente en cada generación, haciendo que el algoritmo se comporte más como una búsqueda aleatoria que como una búsqueda dirigida.
+
+**Experimenta con poblaciones de 10, 30 y 50 individuos. ¿Qué observas en términos de velocidad de convergencia y calidad de la solución?**
 
 ## Conclusiones
 
