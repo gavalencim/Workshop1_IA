@@ -1,0 +1,140 @@
+Fig.1
+
+✓ Configuración cargada
+  Cursos: 8
+  Bloques: 5
+  Salones: 3
+✓ Funciones de evolución cargadas
+
+============================================================
+HORARIO
+============================================================
+MAT | Mie 8-10   | Salón B (Cap:30) | Est:45
+FIS | Vie 8-10   | Salón A (Cap:40) | Est:30
+QUI | Mie 8-10   | Salón B (Cap:30) | Est:35
+PRG | Mie 10-12  | Salón C (Cap:50) | Est:40
+LIT | Lun 8-10   | Salón B (Cap:30) | Est:25
+HIS | Vie 8-10   | Salón B (Cap:30) | Est:30
+ING | Mie 8-10   | Salón C (Cap:50) | Est:35
+EDF | Vie 8-10   | Salón A (Cap:40) | Est:50
+============================================================
+Gen   1: Mejor fitness =  182.0
+Gen  11: Mejor fitness =  195.0
+Gen  21: Mejor fitness =  195.0
+Gen  31: Mejor fitness =  195.0
+Gen  41: Mejor fitness =  200.0
+Gen  51: Mejor fitness =  200.0
+Gen  61: Mejor fitness =  200.0
+Gen  71: Mejor fitness =  200.0
+Gen  81: Mejor fitness =  200.0
+Gen  91: Mejor fitness =  200.0
+Gen 100: Mejor fitness =  200.0
+
+============================================================
+HORARIO
+============================================================
+MAT | Mie 8-10   | Salón C (Cap:50) | Est:45
+FIS | Lun 8-10   | Salón A (Cap:40) | Est:30
+QUI | Lun 8-10   | Salón C (Cap:50) | Est:35
+PRG | Lun 10-12  | Salón A (Cap:40) | Est:40
+LIT | Lun 8-10   | Salón B (Cap:30) | Est:25
+HIS | Lun 10-12  | Salón B (Cap:30) | Est:30
+ING | Mie 8-10   | Salón A (Cap:40) | Est:35
+EDF | Lun 10-12  | Salón C (Cap:50) | Est:50
+============================================================
+
+Fitness final: 200
+
+Fig.3
+
+✓ Configuración cargada
+  Cursos: 8
+  Bloques: 5
+  Salones: 3
+✓ Funciones de evolución cargadas
+
+============================================================
+HORARIO
+============================================================
+MAT | Lun 8-10   | Salón B (Cap:30) | Est:45
+FIS | Mie 10-12  | Salón B (Cap:30) | Est:30
+QUI | Lun 8-10   | Salón C (Cap:50) | Est:35
+PRG | Lun 10-12  | Salón B (Cap:30) | Est:40
+LIT | Mie 8-10   | Salón A (Cap:40) | Est:25
+HIS | Vie 8-10   | Salón C (Cap:50) | Est:30
+ING | Lun 10-12  | Salón B (Cap:30) | Est:35
+EDF | Mie 8-10   | Salón A (Cap:40) | Est:50
+============================================================
+Gen   1: Mejor fitness =  132.0
+Gen  11: Mejor fitness =  195.0
+Gen  21: Mejor fitness =  200.0
+Gen  31: Mejor fitness =  200.0
+Gen  41: Mejor fitness =  200.0
+Gen  51: Mejor fitness =  200.0
+Gen  61: Mejor fitness =  200.0
+Gen  71: Mejor fitness =  200.0
+Gen  81: Mejor fitness =  200.0
+Gen  91: Mejor fitness =  200.0
+Gen 100: Mejor fitness =  200.0
+
+============================================================
+HORARIO
+============================================================
+MAT | Lun 10-12  | Salón C (Cap:50) | Est:45
+FIS | Lun 8-10   | Salón B (Cap:30) | Est:30
+QUI | Lun 8-10   | Salón A (Cap:40) | Est:35
+PRG | Mie 8-10   | Salón A (Cap:40) | Est:40
+LIT | Lun 10-12  | Salón B (Cap:30) | Est:25
+HIS | Lun 10-12  | Salón A (Cap:40) | Est:30
+ING | Mie 8-10   | Salón C (Cap:50) | Est:35
+EDF | Lun 8-10   | Salón C (Cap:50) | Est:50
+============================================================
+
+Fitness final: 200
+
+fig.4
+
+✓ Configuración cargada
+  Cursos: 8
+  Bloques: 5
+  Salones: 3
+✓ Funciones de evolución cargadas
+
+============================================================
+HORARIO
+============================================================
+MAT | Vie 8-10   | Salón A (Cap:40) | Est:45
+FIS | Mie 8-10   | Salón B (Cap:30) | Est:30
+QUI | Lun 10-12  | Salón C (Cap:50) | Est:35
+PRG | Lun 10-12  | Salón B (Cap:30) | Est:40
+LIT | Mie 10-12  | Salón B (Cap:30) | Est:25
+HIS | Lun 10-12  | Salón B (Cap:30) | Est:30
+ING | Mie 8-10   | Salón A (Cap:40) | Est:35
+EDF | Lun 8-10   | Salón C (Cap:50) | Est:50
+============================================================
+Gen   1: Mejor fitness =   87.0
+Gen  11: Mejor fitness =  192.0
+Gen  21: Mejor fitness =  195.0
+Gen  31: Mejor fitness =  195.0
+Gen  41: Mejor fitness =  200.0
+Gen  51: Mejor fitness =  200.0
+Gen  61: Mejor fitness =  200.0
+Gen  71: Mejor fitness =  200.0
+Gen  81: Mejor fitness =  200.0
+Gen  91: Mejor fitness =  200.0
+Gen 100: Mejor fitness =  200.0
+
+============================================================
+HORARIO
+============================================================
+MAT | Lun 10-12  | Salón C (Cap:50) | Est:45
+FIS | Lun 8-10   | Salón A (Cap:40) | Est:30
+QUI | Mie 8-10   | Salón A (Cap:40) | Est:35
+PRG | Lun 8-10   | Salón C (Cap:50) | Est:40
+LIT | Lun 8-10   | Salón B (Cap:30) | Est:25
+HIS | Mie 8-10   | Salón B (Cap:30) | Est:30
+ING | Lun 10-12  | Salón A (Cap:40) | Est:35
+EDF | Mie 8-10   | Salón C (Cap:50) | Est:50
+============================================================
+
+Fitness final: 200
