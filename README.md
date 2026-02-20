@@ -1,1 +1,109 @@
-# Workshop1_IA
+# Algoritmo Genético para Planificación de Horarios
+
+## Descripción del problema
+
+Se implementó un algoritmo genético para asignar **8 cursos** a **5 bloques de tiempo** y **3 salones**, respetando restricciones duras (sin solapamiento de salones, capacidad suficiente, profesores compartidos) y restricciones blandas (preferencia por horarios tempranos y uso eficiente de salones).
+
+Cada individuo se representa como una lista de 8 tuplas `(bloque, salón)`, una por curso. La función de fitness parte de 200 puntos y penaliza las violaciones encontradas.
+
+---
+
+## Parámetros del algoritmo
+
+| Parámetro | Valor |
+|---|---|
+| Tamaño de población | 30 individuos |
+| Número de generaciones | 100 |
+| Probabilidad de mutación | 20% |
+| Selección | Torneo (3 participantes) |
+| Elitismo | 2 mejores pasan directos |
+| Cruce | Un punto aleatorio |
+
+---
+
+## Resultados por corrida
+
+### Corrida 1
+
+**Fitness inicial:** 182 — **Fitness final:** 200 ✅ — **Generación de convergencia:** ~41
+
+![Evolución Corrida 1](Figure_1.png)
+
+**Horario final obtenido:**
+
+| Curso | Bloque | Salón | Capacidad | Estudiantes |
+|---|---|---|---|---|
+| MAT | Mie 8-10 | C | 50 | 45 |
+| FIS | Lun 8-10 | A | 40 | 30 |
+| QUI | Lun 8-10 | C | 50 | 35 |
+| PRG | Lun 10-12 | A | 40 | 40 |
+| LIT | Lun 8-10 | B | 30 | 25 |
+| HIS | Lun 10-12 | B | 30 | 30 |
+| ING | Mie 8-10 | A | 40 | 35 |
+| EDF | Lun 10-12 | C | 50 | 50 |
+
+---
+
+### Corrida 2
+
+**Fitness inicial:** 132 — **Fitness final:** 200 ✅ — **Generación de convergencia:** ~21
+
+![Evolución Corrida 2](Figure_3.png)
+
+**Horario final obtenido:**
+
+| Curso | Bloque | Salón | Capacidad | Estudiantes |
+|---|---|---|---|---|
+| MAT | Lun 10-12 | C | 50 | 45 |
+| FIS | Lun 8-10 | B | 30 | 30 |
+| QUI | Lun 8-10 | A | 40 | 35 |
+| PRG | Mie 8-10 | A | 40 | 40 |
+| LIT | Lun 10-12 | B | 30 | 25 |
+| HIS | Lun 10-12 | A | 40 | 30 |
+| ING | Mie 8-10 | C | 50 | 35 |
+| EDF | Lun 8-10 | C | 50 | 50 |
+
+---
+
+### Corrida 3
+
+**Fitness inicial:** 87 — **Fitness final:** 200 ✅ — **Generación de convergencia:** ~41
+
+![Evolución Corrida 3](Figure_4.png)
+
+**Horario final obtenido:**
+
+| Curso | Bloque | Salón | Capacidad | Estudiantes |
+|---|---|---|---|---|
+| MAT | Lun 10-12 | C | 50 | 45 |
+| FIS | Lun 8-10 | A | 40 | 30 |
+| QUI | Mie 8-10 | A | 40 | 35 |
+| PRG | Lun 8-10 | C | 50 | 40 |
+| LIT | Lun 8-10 | B | 30 | 25 |
+| HIS | Mie 8-10 | B | 30 | 30 |
+| ING | Lun 10-12 | A | 40 | 35 |
+| EDF | Mie 8-10 | C | 50 | 50 |
+
+---
+
+## Resumen comparativo
+
+| | Corrida 1 | Corrida 2 | Corrida 3 |
+|---|---|---|---|
+| Fitness inicial | 182 | 132 | 87 |
+| Fitness final | 200 | 200 | 200 |
+| Convergencia (gen.) | ~41 | ~21 | ~41 |
+| Restricciones duras violadas | 0 | 0 | 0 |
+
+Las tres corridas alcanzaron el **fitness perfecto de 200**, confirmando que el algoritmo encuentra consistentemente soluciones válidas sin importar la calidad del punto de partida.
+
+---
+
+## Conclusiones
+
+**El algoritmo converge de forma robusta independientemente del punto de partida.** La corrida 3 comenzó con un fitness de apenas 87 —la peor población inicial de las tres—, con múltiples violaciones de restricciones duras, y aun así alcanzó el óptimo en las mismas generaciones que la corrida 1, que partió desde un estado mucho más favorable (182). Esto sugiere que la combinación de elitismo, selección por torneo y mutación del 20% es suficiente para escapar de poblaciones iniciales muy malas.
+
+**La mayor parte del aprendizaje ocurre en las primeras 20-40 generaciones.** En las tres corridas la curva de fitness sube abruptamente al principio y luego se estabiliza en 200, donde permanece el resto de la ejecución. Esto indica que 100 generaciones son más que suficientes para este problema, y que probablemente podría reducirse a 50 sin perder calidad en la solución.
+
+**El algoritmo produce horarios diferentes en cada corrida, todos igualmente válidos.** Aunque el fitness final es idéntico (200) en los tres casos, los horarios concretos difieren: por ejemplo, MAT termina en Mie 8-10 (Corrida 1) o Lun 10-12 (Corridas 2 y 3). Esto refleja que el espacio de soluciones óptimas es amplio, y el algoritmo explora distintas regiones de ese espacio según la aleatoriedad de la población inicial y los operadores genéticos.
+
